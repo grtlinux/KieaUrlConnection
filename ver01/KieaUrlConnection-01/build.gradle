@@ -16,6 +16,10 @@ configurations {
 
 repositories {
 	mavenCentral()
+	
+	flatDir {
+		dirs 'libs'
+	}
 }
 
 dependencies {
@@ -31,5 +35,6 @@ dependencies {
 }
 
 tasks.named('test') {
+	exclude '**/*'
 	useJUnitPlatform()
 }
