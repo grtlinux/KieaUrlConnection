@@ -14,11 +14,11 @@ public class HttpUrlConnectionTest {
 	
 	public static void main(String[] args) throws Exception {
 		if (flag) test01();  // https://www.naver.com
-		if (flag) test02();  // getHeaderFields
-		if (flag) test03();  // GET
-		if (flag) test04();  // POST
-		if (flag) test05();  // POST
-		if (flag) test06();  // json req/res
+		if (!flag) test02();  // getHeaderFields
+		if (!flag) test03();  // GET
+		if (!flag) test04();  // POST
+		if (!flag) test05();  // POST
+		if (!flag) test06();  // json req/res
 	}
 	
 	///////////////////////////////////////////////////////////////
