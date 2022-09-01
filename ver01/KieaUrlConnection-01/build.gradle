@@ -23,6 +23,15 @@ repositories {
 }
 
 dependencies {
+	// manual for RestTemplate
+	implementation 'org.apache.httpcomponents:httpclient'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-hibernate5:2.8.4'
+	implementation 'com.github.mervick:aes-everywhere-java:1.2.7'
+
+	// base
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
