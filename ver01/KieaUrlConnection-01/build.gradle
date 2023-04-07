@@ -41,6 +41,18 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+	//implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.3'
+	//implementation 'com.fasterxml.jackson.core:jackson-databind'
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor
+	//implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor', version: '2.13.3'
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor'
+	//implementation 'org.msgpack:jackson-dataformat-msgpack', version: '0.9.3'
+	implementation 'org.msgpack:jackson-dataformat-msgpack:0.9.3'
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml
+	//implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.13.3'
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
 }
 
 tasks.named('test') {
