@@ -27,41 +27,26 @@ public class TainHttpUrlConnection {
 		try {
 			URL url = new URL(info.getUrl());
 			
-			// protocol
+			// protocol, method
 			String protocol = url.getProtocol();
-			
-			// method
-			String method = info.getMethod();
-			
+			String method = info.getMethod().toUpperCase();
 			System.out.println(">>> " + protocol + ", " + method);
 			
-			switch (protocol) {
-			case "http":
-				switch (method) {
-				case "GET":
-					info = httpGet(info);
-					break;
-				case "POST":
-					info = httpPost(info);
-					break;
-				default:
-					System.out.println("ERROR: method error ?? " + method);
-				}
+			switch (protocol + method) {
+			case "httpGET":
+				info = httpGet(info);
 				break;
-			case "https":
-				switch (method) {
-				case "GET":
-					info = httpsGet(info);
-					break;
-				case "POST":
-					info = httpsPost(info);
-					break;
-				default:
-					System.out.println("ERROR: method error ?? " + method);
-				}
+			case "httpPOST":
+				info = httpPost(info);
+				break;
+			case "httpsGET":
+				info = httpsGet(info);
+				break;
+			case "httpsPOST":
+				info = httpsPost(info);
 				break;
 			default:
-				System.out.println("ERROR: protocol error ?? " + protocol);
+				throw new Exception("ERROR: protocol+method error ?? " + protocol + method);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

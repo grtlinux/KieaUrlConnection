@@ -18,14 +18,14 @@ public class TestMain {
 		
 		if (Boolean.TRUE) test01_httpGet();
 		if (Boolean.TRUE) test02_httpPost();
-		if (!Boolean.TRUE) test03_httpsGet();
-		if (!Boolean.TRUE) test04_httpsPost();
+		if (Boolean.TRUE) test03_httpsGet();
+		if (Boolean.TRUE) test04_httpsPost();
 		
 		System.out.println("main: finish ...");
 	}
 	
 	private static void test01_httpGet() {
-		System.out.println("test01_httpGet: start ...");
+		System.out.println("-------------------> test01_httpGet: start ...");
 		
 		try {
 			HttpInfo info = new HttpInfo();
@@ -61,7 +61,7 @@ public class TestMain {
 	}
 
 	private static void test02_httpPost()  {
-		System.out.println("test02_httpPost: start ...");
+		System.out.println("-------------------> test02_httpPost: start ...");
 		
 		try {
 			HttpInfo info = new HttpInfo();
@@ -97,7 +97,7 @@ public class TestMain {
 	}
 	
 	private static void test03_httpsGet() {
-		System.out.println("test03_httpsGet: start ...");
+		System.out.println("-------------------> test03_httpsGet: start ...");
 		
 		try {
 			HttpInfo info = new HttpInfo();
@@ -134,7 +134,7 @@ public class TestMain {
 	}
 	
 	private static void test04_httpsPost() {
-		System.out.println("test04_httpsPost: start ...");
+		System.out.println("-------------------> test04_httpsPost: start ...");
 		
 		try {
 			HttpInfo info = new HttpInfo();
